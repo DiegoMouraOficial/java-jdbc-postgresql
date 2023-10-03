@@ -10,7 +10,7 @@ import java.util.logging.Logger;
  */
 public class SingleConnection {
     private static final String url = "jdbc:postgresql://localhost:5433/javajdbc";
-    private static final String password = "teste";
+    private static final String password = "102030";
     private static final String user = "postgres";
     private static Connection connection = null;
 
@@ -40,7 +40,8 @@ public class SingleConnection {
 
     }
 
-    public static void getConnection() {
+    public static Connection getConnection() {
+        return connection;
     }
 
     private static final Logger logger = Logger.getLogger(SingleConnection.class.getName());
