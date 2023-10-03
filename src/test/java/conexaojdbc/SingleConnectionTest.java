@@ -15,6 +15,10 @@ public class SingleConnectionTest {
         UserJavaJdbcDao userJavaJdbcDao = new UserJavaJdbcDao(connection);
         UserJavaJdbc userJavaJdbc = new UserJavaJdbc();
 
+        userJavaJdbc.setId(4L);
+        userJavaJdbc.setNome("Mãe");
+        userJavaJdbc.setEmail("mae@teste.com.br");
+
         userJavaJdbcDao.salvar(userJavaJdbc);
     }
 }

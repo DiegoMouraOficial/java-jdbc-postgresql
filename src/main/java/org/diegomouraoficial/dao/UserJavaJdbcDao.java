@@ -21,9 +21,9 @@ public class UserJavaJdbcDao {
         try {
             String sql = "insert into userjavajdbc (id, nome, email) values (?, ?, ?)";
             PreparedStatement insert = connection.prepareStatement(sql);
-            insert.setLong(1, 3);
-            insert.setString(2, "Lupi salvar DAO");
-            insert.setString(3, "lupi@teste.com.br");
+            insert.setLong(1, userJavaJdbc.getId());
+            insert.setString(2, userJavaJdbc.getNome());
+            insert.setString(3, userJavaJdbc.getEmail());
             insert.execute();
             connection.commit(); // Salva no banco de dados
         } catch (Exception e) {
