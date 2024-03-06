@@ -1,7 +1,8 @@
 package conexaojdbc;
 
-import org.diegomouraoficial.dao.UserJavaJdbcDao;
-import org.diegomouraoficial.model.UserJavaJdbc;
+import org.diegomouraoficial.dao.UserDao;
+import org.diegomouraoficial.model.User;
+import org.diegomouraoficial.util.ConnectionUtil;
 import org.junit.Test;
 
 import java.sql.Connection;
@@ -10,15 +11,15 @@ public class SingleConnectionTest {
     @Test
     public void initBanco() {
 
-        Connection connection = SingleConnection.getConnection();
+        Connection connection = ConnectionUtil.getConnection();
 
-        UserJavaJdbcDao userJavaJdbcDao = new UserJavaJdbcDao(connection);
-        UserJavaJdbc userJavaJdbc = new UserJavaJdbc();
+        UserDao userDao = new UserDao(connection);
+        User user = new User();
 
-        userJavaJdbc.setId(4L);
-        userJavaJdbc.setNome("Mãe");
-        userJavaJdbc.setEmail("mae@teste.com.br");
+        user.setId(4);
+        user.setName("Mãe");
+        user.setEmail("mae@teste.com.br");
 
-        userJavaJdbcDao.salvar(userJavaJdbc);
+        userDao.addUser(user);
     }
 }
