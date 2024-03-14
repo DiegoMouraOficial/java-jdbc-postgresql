@@ -2,7 +2,7 @@
 
 <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
 
-<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge"/>
+<img src="http://img.shields.io/static/v1?label=STATUS&message=%20FINALIZADO&color=critical&style=for-the-badge"/>
 
 
 # Projeto JDBC - CRUD Gerenciador de Usuários
@@ -86,17 +86,17 @@ Para executar a aplicação, siga os passos abaixo:
 4. Você pode executar a aplicação a partir de sua IDE de desenvolvimento Java clicando em Run.
 
 ## 🛠️ Estrutura do Projeto
-- package app
+### package app
  - `AddUser`: Classe com o método para adicionar novo usuário no banco de dados.
  - `DeleteUser`: Classe com o método para deletar usuário no banco de dados por ID.
  - `GetAllUsers`: Classe com o método para listar todos usuários existentes no banco de dados.
  - `GetByIdUser`: Classe com o método para buscar usuário por ID no banco de dados.
  - `UpdateUser`: Classe com o método para atualizar usuário existente no banco de dados por ID.
-- package: dao
+### package: dao
  - `UserDAO.java`: Classe DAO que contém métodos para manipular dados de usuários no banco de dados.
-- package: model
+### package: model
  - `User.java`: Classe modelo que representa um usuário com ID, nome e email.
-- package: util
+### package: util
 - `ConnectionUtil.java`: Classe utilitária para obter a conexão com o banco de dados.
 
 
