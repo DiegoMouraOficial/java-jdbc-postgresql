@@ -16,11 +16,11 @@
 
   <dependencies>
 
-    <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+    <!-- https://jdbc.postgresql.org/download/-->
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
-      <version>42.6.0</version>
+      <version>42.7.2</version>
     </dependency>
 
     <!-- Dependecia de testes com JUnit-->
@@ -30,7 +30,13 @@
       <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>RELEASE</version>
+      <scope>test</scope>
+    </dependency>
 
-  </dependencies>
+  </dependencies><build><plugins><plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><configuration><source>8</source><target>8</target></configuration></plugin></plugins></build>
 
 </project>
