@@ -88,10 +88,15 @@ Para executar a aplicação, siga os passos abaixo:
 ## 🛠️ Estrutura do Projeto
 ### package app
  - `AddUser`: Classe com o método para adicionar novo usuário no banco de dados.
+   
  - `DeleteUser`: Classe com o método para deletar usuário no banco de dados por ID.
+   
  - `GetAllUsers`: Classe com o método para listar todos usuários existentes no banco de dados.
+   
  - `GetByIdUser`: Classe com o método para buscar usuário por ID no banco de dados.
+   
  - `UpdateUser`: Classe com o método para atualizar usuário existente no banco de dados por ID.
+   
 ### package: dao
  - `UserDAO.java`: Classe DAO que contém métodos para manipular dados de usuários no banco de dados.
 ### package: model
