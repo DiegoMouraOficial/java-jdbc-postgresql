@@ -8,12 +8,13 @@ import java.util.logging.Logger;
 
 public class ConnectionUtil {
     private static final Logger logger = Logger.getLogger(ConnectionUtil.class.getName());
-    private static final String URL = "jdbc:postgresql://localhost:5433/javajdbc";
+    private static final String URL = "jdbc:postgresql://localhost:5433/jdbc";
     private static final String USER = "postgres";
     private static final String PASSWORD = "102030";
 
     // Método para obter a conexão com o banco de dados
     public static Connection getConnection() {
+
         Connection connection = null;
 
         try {
@@ -22,7 +23,6 @@ public class ConnectionUtil {
         } catch (ClassNotFoundException | SQLException e) {
             logger.log(Level.SEVERE, "Erro ao conectar ao banco de dados", e);
         }
-
         return connection;
     }
 }
